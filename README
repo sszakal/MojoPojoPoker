@@ -1,0 +1,8 @@
+Mojo Pojo Poker
+
+A poker game simulator in C# that uses Cactus Kev's Algorithm along with a perfect hash function (by Paul Senzee) to replace the binary search.
+
+References
+--------------
+Cactus Kev Algorithm - http://www.suffecool.net/poker/evaluator.html
+Paul Senzee Perfect Hash Optimization - http://www.paulsenzee.com/2006/06/some-perfect-hash.html
