@@ -18,17 +18,20 @@ namespace MojoPojoPoker.CLI
         /// </summary>
         public abstract string CommandName { get; }
         /// <summary>
+        /// Description for the command. Usage information for the CLI.
+        /// </summary>
+        public abstract string Description { get; }
+        /// <summary>
         /// An index for the command.
         /// It is used by the CLI to order the available commands and
         /// display them to the user.
         /// </summary>
-        public abstract string Description { get; }
+        public abstract int Order { get; }
         /// <summary>
         /// The command factory.
         /// </summary>
         /// <param name="arguments">An array of strings. Provided by the CLI</param>
         /// <returns>An ICommand contrete type.</returns>
-        public abstract int Order { get; }
         public ICommand MakeCommand(string[] arguments)
         {
             return (ICommand)Activator.CreateInstance(this.GetType());
